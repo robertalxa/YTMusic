@@ -1,0 +1,121 @@
+#optInicio{
+    color: #ffffff;
+}
+
+.favs{
+    display: grid;
+    grid-gap: 20px;
+    padding: 30px;
+    color: #ffffff;
+    grid-template-areas:
+    "title"
+    "content";
+}
+
+.titleSection{
+    grid-area: "title";
+    font-family: 'RobotoBold';
+    font-weight: 700;
+}
+
+.contentSection{
+    grid-area: "content";
+    overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.mainContent ::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #0c0c0c; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(24, 24, 24); 
+}
+
+.artists{
+    display: flex;
+    width: 100%;
+    min-height: 200px;
+    height: 250px;
+}
+
+.artist{
+    display: grid;
+    min-height: 100%;
+    height: 180px;
+    width: 180px;
+    grid-template-areas: 
+    "photo"
+    "name"
+    "desc"
+    ;
+    margin-right: 30px;
+}
+
+.imgArtist{
+    grid-area: "photo";
+    height: 100%;
+    width: 100%;
+    min-height: 180px;
+    min-width: 180px;
+    margin:0 auto;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.imgArtist img{
+    grid-area: "photo";
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.nameArtist{
+    grid-area: "name";
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 10px 0 0 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.descArtist{
+    grid-area: "desc";
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+    font-size: small;
+    margin: 2px 0 0 0;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+}
+
+@media (max-width:768px){
+    .imgArtist{
+        grid-area: "photo";
+        height: 100%;
+        width: 100%;
+        min-height: 100px;
+        min-width: 100px;
+        margin:0 auto;
+        transition: 1s;
+    }
+}
